@@ -10,7 +10,7 @@ const Navbar = () => {
   return (
     <header className="main__header border-b border-[#27272A] flex items-center justify-between p-4">
       <Link href="/" className="main__header__logo">
-        <span className="text-2xl font-semibold">Yusubov</span>
+        <span className="text-2xl font-semibold">Yusubov</span>\
       </Link>
       <TooltipProvider delayDuration={300}>
         <Tooltip>
