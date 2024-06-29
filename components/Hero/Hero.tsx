@@ -2,7 +2,7 @@
 import { Button } from "@/components/ui/button";
 import HeroTypeWriter from "./HeroTypeWriter";
 import { motion } from "framer-motion";
-import me from "../../public/me.jpg";
+import me from '/me.jpg';
 import Image from "next/image";
 import { AuroraBackground } from "../ui/aurora-background";
 import Link from "next/link";
