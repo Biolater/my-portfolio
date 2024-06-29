@@ -25,12 +25,16 @@ export const drawerItems = [
 ];
 const Navbar = () => {
   return (
-    <header className="main__header sticky top-0 backdrop-blur-lg border-b border-[#27272A] flex items-center justify-between p-4">
-      <Link href="/" className="main__header__logo">
-        <span className="text-2xl font-semibold">yusubov</span>
-      </Link>
-      <DrawerComponent />
-      <NavbarLinks />
+    <header
+      className="main__header z-20 sticky top-0 backdrop-blur-lg border-b border-[#27272A] p-4"
+    >
+      <div className="container mx-auto flex items-center justify-between">
+        <Link href="/" className="main__header__logo">
+          <span className="text-2xl font-semibold">yusubov</span>
+        </Link>
+        <DrawerComponent />
+        <NavbarLinks />
+      </div>
     </header>
   );
 };
