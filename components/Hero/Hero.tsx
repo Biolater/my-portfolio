@@ -39,7 +39,7 @@ const Hero = () => {
             initial={{ opacity: 0, x: -100 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 1.1 }}
-            className="buttons max-w-[169.55px] mx-auto flex flex-wrap items-center gap-2 justify-center"
+            className="buttons max-w-[169.55px] md:max-w-max mx-auto flex flex-wrap items-center gap-2 justify-center"
           >
             <Button>Resume</Button>
             <Button asChild variant={"outline"}>
@@ -47,7 +47,7 @@ const Hero = () => {
                 Github
               </a>
             </Button>
-            <Button className="flex-grow" asChild variant={"secondary"}>
+            <Button className="flex-grow md:flex-grow-0" asChild variant={"secondary"}>
               <Link href="#contact">Contact Me</Link>
             </Button>
           </motion.div>
