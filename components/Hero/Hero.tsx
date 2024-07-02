@@ -9,7 +9,7 @@ import Link from "next/link";
 const Hero = () => {
   return (
     <AuroraBackground>
-      <div className="z-10 container overflow-x-hidden flex flex-col-reverse md:flex-row items-center justify-center relative text-primary gap-6 md:gap-12 lg:gap-24">
+      <div className="z-10 overflow-x-hidden flex flex-col-reverse md:flex-row items-center justify-center relative text-primary gap-6 md:gap-12 lg:gap-24">
         <div>
           <motion.h1
             initial={{ opacity: 0, x: -100 }}
