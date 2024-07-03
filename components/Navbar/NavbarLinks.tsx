@@ -2,10 +2,10 @@ import { drawerItems } from "./Navbar";
 import Link from "next/link";
 const NavbarLinks = () => {
   return (
-    <nav className="nav__links hidden md:flex md:items-center">
+    <nav className="nav__links gap-4 text-foreground/60 hidden md:flex md:items-center">
       {drawerItems.map((item) => (
         <Link
-          className="font-medium px-3 transition-all duration-200 py-2 hover:bg-[#27272A] rounded-lg"
+          className="font-medium hover:text-foreground/80 transition-all duration-200"
           href={item.linkVal}
           key={item.text}
         >

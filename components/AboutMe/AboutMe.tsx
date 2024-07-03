@@ -14,9 +14,9 @@ const variants = {
 
 const AboutMe = () => {
   return (
-    <section id="#about" className="px-4 flex flex-col mx-auto md:flex-row justify-center items-center gap-8 py-6 md:py-12 container">
+    <section id="about" className="px-4 flex flex-col mx-auto md:flex-row justify-center items-center gap-8 py-6 md:py-12 container">
       <div className="md:basis-[50%]">
-        <motion.h1
+        <motion.h2
           initial={variants.initial}
           whileInView={variants.whileInView}
           transition={{ duration: 0.5, delay: 0.8 }}
@@ -24,7 +24,7 @@ const AboutMe = () => {
           className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4"
         >
           About Me
-        </motion.h1>
+        </motion.h2>
         <motion.p
           initial={variants.initial}
           whileInView={variants.whileInView}

@@ -47,7 +47,7 @@ const DrawerComponent = () => {
         <DrawerHeader className="flex items-center justify-between">
           <DrawerTitle>Yusubov</DrawerTitle>
           <DrawerClose>
-            <X className="stroke-white/50 hover:stroke-white/70 active:ring rounded-lg" />
+            <X className="stroke-primary/50 hover:stroke-primary/80 active:ring rounded-lg" />
           </DrawerClose>
         </DrawerHeader>
         <div className="flex flex-col">

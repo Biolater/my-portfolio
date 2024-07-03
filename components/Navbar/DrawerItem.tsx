@@ -9,7 +9,7 @@ const DrawerItem: FC<{ text: string; linkVal: string, onSelect: () => void }> = 
   return (
     <Link
       onClick={onSelect}
-      className="font-medium transition-colors duration-200 px-4 py-2 hover:bg-[#27272A]"
+      className="font-medium transition-colors duration-200 px-4 py-2 hover:bg-background/20 rounded-lg"
       href={linkVal}
     >
       {text}
