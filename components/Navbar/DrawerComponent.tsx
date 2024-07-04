@@ -30,7 +30,13 @@ const DrawerComponent = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
   return (
-    <Drawer disablePreventScroll open={drawerOpen} onOpenChange={setDrawerOpen} direction="right">
+    <Drawer
+      disablePreventScroll
+      noBodyStyles
+      open={drawerOpen}
+      onOpenChange={setDrawerOpen}
+      direction="right"
+    >
       <TooltipProvider delayDuration={300}>
         <Tooltip>
           <DrawerTrigger asChild>

@@ -4,9 +4,12 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 73px; 
+  scroll-padding-top: 73px;
 }
 
+body {
+  height: 9999px;
+}
 
 .main__header {
   -webkit-backdrop-filter: blur(16px);
