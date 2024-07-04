@@ -20,6 +20,7 @@ const Projects = () => {
         >
           My Projects
         </motion.h2>
+        <div className="projects"></div>
       </div>
     </section>
   );
