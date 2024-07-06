@@ -19,7 +19,7 @@ const ProjectCard: FC<Props> = ({
   demoLink,
 }) => {
   return (
-    <Card className="max-w-[300px] transition-all origin-bottom duration-300 hover:scale-[1.02]">
+    <Card className="w-full transition-all origin-bottom duration-300 hover:scale-[1.02]">
       <CardHeader className="p-0">
         <Image
           className="rounded-t-lg h-[227px] object-cover"

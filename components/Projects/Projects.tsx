@@ -54,14 +54,16 @@ const Projects = () => {
     <section id="projects" className="px-4 py-6 md:py-12 container mx-auto">
       <div>
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 md:mb-6">
-          My Projects
+          Projects.
         </h2>
-        <div
+        <motion.div
           ref={projectsRef}
           className="projects flex gap-4 flex-wrap justify-center"
         >
           {projects.map((project, index) => (
             <motion.div
+              className="sm:max-w-[287px] md:max-w-[300px]"
+              layout
               initial={{ opacity: 0 }}
               animate={{ opacity: projectsInView ? 1 : 0 }}
               viewport={{ once: true }}
@@ -71,7 +73,7 @@ const Projects = () => {
               <ProjectCard {...project} />
             </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

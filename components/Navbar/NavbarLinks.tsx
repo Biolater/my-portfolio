@@ -5,7 +5,6 @@ import Link from "next/link";
 const NavbarLinks = () => {
   const [activeLink, setActiveLink] = useState(drawerItems[0].linkVal);
   const sections = drawerItems.map((item) => item.linkVal);
-  console.log(sections);
   const handleLink = (linkVal: string) => {
     setActiveLink(linkVal);
   };

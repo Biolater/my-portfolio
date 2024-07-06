@@ -23,7 +23,7 @@ const AboutMe = () => {
           viewport={{ once: true }}
           className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4"
         >
-          About Me
+          About.
         </motion.h2>
         <motion.p
           initial={variants.initial}

@@ -7,7 +7,7 @@ export const drawerItems = [
     linkVal: "#home",
   },
   {
-    text: "About me",
+    text: "About",
     linkVal: "#about",
   },
   {
