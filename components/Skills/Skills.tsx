@@ -88,21 +88,11 @@ const Skills = () => {
   return (
     <section id="skills" className="px-4 py-6 container mx-auto md:py-12">
       <div>
-        <motion.h2
-          initial={{
-            opacity: 0,
-            y: 100,
-          }}
-          whileInView={{
-            opacity: 1,
-            y: 0,
-          }}
-          transition={{ duration: 0.5 }}
-          viewport={{ once: true }}
+        <h2
           className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 md:mb-6"
         >
           My Skills
-        </motion.h2>
+        </h2>
         <motion.div
           layout
           ref={skillsRef}
