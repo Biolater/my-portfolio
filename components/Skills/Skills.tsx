@@ -105,7 +105,7 @@ const Skills = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.2 }}
               key={index}
-              className="card__container md:w-full max-w-[230px] min-w-[150px]"
+              className="card__container w-full sm:max-w-[230px] min-w-[150px]"
             >
               <Card className="w-full transition-all origin-bottom duration-300 hover:scale-[1.05] md:hover:scale-[1.03]">
                 <CardHeader className="items-center justify-center">
