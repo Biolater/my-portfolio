@@ -86,7 +86,7 @@ const Skills = () => {
     }
   }, [isInView, skillsInView]);
   return (
-    <section id="skills" className="px-4 py-6 container mx-auto md:py-12">
+    <section id="skills" className="px-4 py-6 container max-w-7xl mx-auto md:py-12">
       <div>
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 md:mb-6">
           Skills.

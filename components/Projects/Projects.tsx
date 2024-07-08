@@ -51,7 +51,10 @@ const Projects = () => {
     }
   }, [isInView, projectsInView]);
   return (
-    <section id="projects" className="px-4 py-6 md:py-12 container mx-auto">
+    <section
+      id="projects"
+      className="px-4 max-w-7xl py-6 md:py-12 container mx-auto"
+    >
       <div>
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 md:mb-6">
           Projects.
