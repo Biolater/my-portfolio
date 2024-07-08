@@ -6,12 +6,13 @@ import { Button } from "@/components/ui/button";
 import { useForm, ValidationError } from "@formspree/react";
 import { useToast } from "@/components/ui/use-toast";
 import { useEffect, useState, useRef, FormEvent } from "react";
-
+import { motion } from "framer-motion";
 const Contact = () => {
   const [state, handleSubmit] = useForm("mwpekyyp");
   const { toast } = useToast();
   const [toastShown, setToastShown] = useState(false);
   const nameInputRef = useRef<HTMLInputElement>(null);
+  const messageInputRef = useRef<HTMLTextAreaElement>(null);
   useEffect(() => {
     if (state.succeeded && !toastShown) {
       toast({
@@ -27,11 +28,13 @@ const Contact = () => {
     formEvent.preventDefault();
     if (
       nameInputRef.current &&
-      nameInputRef.current.value.trim().length === 0
+      messageInputRef.current &&
+      (nameInputRef.current.value.trim().length === 0 ||
+        messageInputRef.current.value.trim().length === 0)
     ) {
       toast({
-        title: "Please enter your name",
-        description: "Name cannot be empty",
+        title: "Please fill in all fields",
+        description: "Name and message are required.",
         variant: "destructive",
       });
     } else {
@@ -50,7 +53,7 @@ const Contact = () => {
         </h2>
         <form onSubmit={handleSendMessage} className="flex flex-col gap-4">
           <div className="flex flex-col gap-4 md:flex-row">
-            <div className="grid w-full items-center gap-1.5">
+            <motion.div className="grid w-full items-center gap-1.5">
               <Label htmlFor="name">Name</Label>
               <Input
                 ref={nameInputRef}
@@ -61,8 +64,8 @@ const Contact = () => {
                 className="md:py-6"
                 placeholder="Enter your name"
               />
-            </div>
-            <div className="grid w-full items-center gap-1.5">
+            </motion.div>
+            <motion.div className="grid w-full items-center gap-1.5">
               <Label htmlFor="email">Email</Label>
               <Input
                 required
@@ -77,11 +80,12 @@ const Contact = () => {
                 field="email"
                 errors={state.errors}
               />
-            </div>
+            </motion.div>
           </div>
-          <div className="grid w-full items-center gap-1.5">
+          <motion.div className="grid w-full items-center gap-1.5">
             <Label htmlFor="message">Message</Label>
             <Textarea
+              ref={messageInputRef}
               required
               id="message"
               name="message"
@@ -93,8 +97,8 @@ const Contact = () => {
               field="message"
               errors={state.errors}
             />
-          </div>
-          <div className="flex sm:justify-end">
+          </motion.div>
+          <motion.div className="flex sm:justify-end">
             <Button
               type="submit"
               className="flex-grow sm:flex-grow-0 "
@@ -103,7 +107,7 @@ const Contact = () => {
             >
               Send Message
             </Button>
-          </div>
+          </motion.div>
         </form>
       </div>
     </section>

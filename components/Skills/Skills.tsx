@@ -101,7 +101,7 @@ const Skills = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: skillsInView ? 1 : 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.2 }}
+              transition={{ duration: 0.5, delay: index * 0.3 }}
               key={index}
               className="card__container w-[250px] sm:w-full sm:max-w-[230px] min-w-[150px]"
             >

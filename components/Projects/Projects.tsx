@@ -70,7 +70,7 @@ const Projects = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: projectsInView ? 1 : 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.2 }}
+              transition={{ duration: 0.5, delay: index * 0.3 }}
               key={index}
             >
               <ProjectCard {...project} />
