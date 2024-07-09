@@ -6,35 +6,57 @@ import { Button } from "@/components/ui/button";
 import { useForm, ValidationError } from "@formspree/react";
 import { useToast } from "@/components/ui/use-toast";
 import { useEffect, useState, useRef, FormEvent } from "react";
+import { emailValidation } from "@/utils/emailValidation";
 import { motion } from "framer-motion";
+import { Loader2 } from "lucide-react";
+
 const Contact = () => {
   const [state, handleSubmit] = useForm("mwpekyyp");
   const { toast } = useToast();
   const [toastShown, setToastShown] = useState(false);
   const nameInputRef = useRef<HTMLInputElement>(null);
   const messageInputRef = useRef<HTMLTextAreaElement>(null);
+  const emailInputRef = useRef<HTMLInputElement>(null);
   useEffect(() => {
     if (state.succeeded && !toastShown) {
       toast({
         title: "Your message has been sent!",
         description: "Thanks for your message. I'll be in touch soon.",
       });
+      if (nameInputRef.current !== null) {
+        nameInputRef.current.value = "";
+      }
+      if (messageInputRef.current !== null) {
+        messageInputRef.current.value = "";
+      }
+      if (emailInputRef.current !== null) {
+        emailInputRef.current.value = "";
+      }
       setToastShown(true);
     }
   }, [state.succeeded, toastShown, toast]);
 
   const handleSendMessage = (e: FormEvent) => {
+    const nameInputValue = nameInputRef.current?.value;
+    const messageInputValue = messageInputRef.current?.value;
+    const emailInputValue = emailInputRef.current?.value;
     const formEvent = e as React.FormEvent<HTMLFormElement>;
     formEvent.preventDefault();
     if (
-      nameInputRef.current &&
-      messageInputRef.current &&
-      (nameInputRef.current.value.trim().length === 0 ||
-        messageInputRef.current.value.trim().length === 0)
+      nameInputValue &&
+      messageInputValue &&
+      (nameInputValue.trim().length === 0 ||
+        messageInputValue.trim().length === 0) // Corrected this line
     ) {
       toast({
         title: "Please fill in all fields",
         description: "Name and message are required.",
+        variant: "destructive",
+      });
+    } else if (emailInputValue && !emailValidation(emailInputValue)) {
+      toast({
+        title: "Invalid email",
+        description: "Please enter a valid email address.",
         variant: "destructive",
       });
     } else {
@@ -68,6 +90,7 @@ const Contact = () => {
             <motion.div className="grid w-full items-center gap-1.5">
               <Label htmlFor="email">Email</Label>
               <Input
+                ref={emailInputRef}
                 required
                 type="email"
                 id="email"
@@ -101,11 +124,14 @@ const Contact = () => {
           <motion.div className="flex sm:justify-end">
             <Button
               type="submit"
-              className="flex-grow sm:flex-grow-0 "
+              className="flex-grow flex gap-2 items-center sm:flex-grow-0 "
               disabled={state.submitting}
               variant={"default"}
             >
               Send Message
+              {state.submitting && (
+                <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+              )}
             </Button>
           </motion.div>
         </form>
