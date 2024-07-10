@@ -32,9 +32,10 @@ const Navbar = () => {
           <span className="text-2xl font-semibold">yusubov</span>
         </Link>
         <div className="flex items-center gap-4">
+          <ModeToggle />
           <DrawerComponent />
           <NavbarLinks />
-          <ModeToggle />
+          <ModeToggle hideToggle />
         </div>
       </div>
     </header>
