@@ -24,7 +24,7 @@ const SOCIALS = [
 const Footer = () => {
   return (
     <footer className="footer px-4 border-t border-border py-6">
-      <div className="text-center px-4 flex gap-6 flex-col sm:flex-row items-center justify-between bg-primary rounded-lg py-6 md:py-12  md:px-8 container  max-w-7xl mx-auto text-background">
+      <div className="text-center px-4 flex gap-6 flex-col sm:flex-row items-center justify-between bg-primary rounded-lg py-6  md:px-8 container  max-w-7xl mx-auto text-background">
         <p className="text-sm order-1 sm:order-first font-medium sm:text-base lg:text-lg">
           &copy; 2024 Murad Yusubov. All rights reserved.
         </p>
@@ -38,7 +38,11 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <social.icon className={`text-background ${!social.noFill && "fill-background"} size-6`} />
+                <social.icon
+                  className={`text-background ${
+                    !social.noFill && "fill-background"
+                  } size-6`}
+                />
               </a>
             ))}
           </div>
