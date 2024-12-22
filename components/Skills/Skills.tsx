@@ -27,10 +27,6 @@ const MY_SKILLS = [
     logo: TS_LOGO,
   },
   {
-    name: "Python",
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
-  },
-  {
     name: "React.js",
     logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
   },
@@ -39,8 +35,20 @@ const MY_SKILLS = [
     logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
   },
   {
+    name: "Redux Toolkit",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg",
+  },
+  {
     name: "Tailwind CSS",
     logo: TAILWINDCSS_LOGO,
+  },
+  {
+    name: "Node.js",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+  },
+  {
+    name: "Express.js",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
   },
   {
     name: "Git",
@@ -55,10 +63,6 @@ const MY_SKILLS = [
     logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg",
   },
   {
-    name: "Node.js",
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
-  },
-  {
     name: "MongoDB",
     logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
   },
@@ -67,12 +71,25 @@ const MY_SKILLS = [
     logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
   },
   {
-    name: "Express.js",
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
+    name: "Python",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
   },
   {
-    name: "Redux Toolkit",
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg",
+    name: "pandas",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Pandas_logo.svg/1280px-Pandas_logo.svg.png",
+    objectFit: "contain",
+  },
+  {
+    name: "NumPy",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg",
+  },
+  {
+    name: "Matplotlib",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/matplotlib/matplotlib-original.svg",
+  },
+  {
+    name: "scikit-learn",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Scikit_learn_logo_small.svg/500px-Scikit_learn_logo_small.svg.png",
   },
 ];
 
@@ -86,7 +103,10 @@ const Skills = () => {
     }
   }, [isInView, skillsInView]);
   return (
-    <section id="skills" className="px-4 py-6 container max-w-7xl mx-auto md:py-12">
+    <section
+      id="skills"
+      className="px-4 py-6 container max-w-7xl mx-auto md:py-12"
+    >
       <div>
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 md:mb-6">
           Skills.
@@ -101,7 +121,7 @@ const Skills = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: skillsInView ? 1 : 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.3 }}
+              transition={{ duration: 0.5, delay: index * 0.15 }}
               key={index}
               className="card__container w-[250px] sm:w-full sm:max-w-[230px] min-w-[150px]"
             >
@@ -109,7 +129,7 @@ const Skills = () => {
                 <CardHeader className="items-center justify-center">
                   <Image
                     quality={100}
-                    className="h-[100px] object-cover"
+                    className={`h-[100px] object-contain`}
                     width={100}
                     height={100}
                     src={skill.logo}

@@ -3,6 +3,8 @@ import JobHubImage from "@/assets/Project_Images/JobHub.jpg";
 import SpaceImage from "@/assets/Project_Images/SpaceImage.jpg";
 import GamingImage from "@/assets/Project_Images/GamingImage.png";
 import CompanyImage from "@/assets/Project_Images/CompanyImage.jpg";
+import HealthBarImage from "@/assets/Project_Images/HealthBarImage.jpg";
+import BudgetBuddyImage from "@/assets/Project_Images/BudgetBuddyApp.jpg";
 import ProjectCard from "./ProjectCard";
 import { useState, useRef, useEffect } from "react";
 import { motion, useInView } from "framer-motion";
@@ -18,13 +20,22 @@ const Projects = () => {
       demoLink: "https://newmain.d2uhr2kwe1sd1q.amplifyapp.com/",
     },
     {
-      cardImg: SpaceImage,
-      title: "SpaceOne - Discover Space with NASA APIs",
+      cardImg: HealthBarImage,
+      title: "Health Bar - Health Awareness Platform",
       description:
-        "Developed a web application to explore space news, view NASA's Astronomy Picture of the Day, and connect with a community through real-time messaging.",
-      githubLink: "https://github.com/Biolater/space-one",
-      demoLink: "https://space-one-15043.web.app/",
+        "Developed a web application to promote health awareness, featuring health news, diseases & conditions information, an AI-powered symptom checker, community interactions, and personalized user accounts.",
+      githubLink: "https://github.com/Biolater/Health-Bar",
+      demoLink: "https://main.dt7psbukvsr7k.amplifyapp.com/",
     },
+    {
+      cardImg: BudgetBuddyImage,
+      title: "Student Budget Buddy",
+      description:
+        "Developed a web application to help students manage their finances, featuring expense tracking, budget management, financial insights, savings goals, and educational resources, built with Next.js, TypeScript, and Tailwind CSS.",
+      githubLink: "https://github.com/Biolater/Student-Budget-Buddy",
+      demoLink: "https://student-bugdet-buddy-lyje.vercel.app/",
+    },
+
     {
       cardImg: GamingImage,
       title: "OnlyGamers Inc. - Gaming Platform",
@@ -32,14 +43,6 @@ const Projects = () => {
         "Developed a marketplace for gamers to connect with top players via instructional videos, with a polished UI, Stripe integration, and GraphQL APIs.",
       githubLink: null,
       demoLink: "https://www.only-gamers.com/",
-    },
-    {
-      cardImg: CompanyImage,
-      title: "CompanyEasier - Find & Track Company Info",
-      description:
-        "Created a platform for users to search and favorite companies, view related news, and manage accounts using React, Firebase, and REST APIs.",
-      githubLink: "https://github.com/Biolater/companyEasierFireBase",
-      demoLink: "https://companyeasier.web.app/",
     },
   ];
   const [projectsInView, setProjectsInView] = useState(false);

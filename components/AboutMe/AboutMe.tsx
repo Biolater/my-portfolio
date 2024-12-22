@@ -14,7 +14,10 @@ const variants = {
 
 const AboutMe = () => {
   return (
-    <section id="about" className="px-4 max-w-7xl flex flex-col mx-auto md:flex-row justify-center items-center gap-8 py-6 md:py-12 container">
+    <section
+      id="about"
+      className="px-4 max-w-7xl flex flex-col mx-auto md:flex-row justify-center items-center gap-8 py-6 md:py-12 container"
+    >
       <div className="md:basis-[50%]">
         <motion.h2
           initial={variants.initial}
@@ -32,11 +35,14 @@ const AboutMe = () => {
           viewport={{ once: true }}
           className="mb-3 sm:text-lg lg:text-xl"
         >
-          I&apos;m Murad Yusubov, a seasoned full-stack web developer with a
-          strong focus on frontend technologies. Coding has been my passion
-          since childhood, and every day I dive into new projects to deepen my
-          skills.
+          I&apos;m Murad Yusubov, an 18-year-old full-stack web developer with
+          three years of experience in web application development. In the past
+          year, I&apos;ve also been exploring machine learning and enhancing my
+          skills in AI-based technologies. Currently, I&apos;m pursuing higher
+          education in Turkey and bring a global perspective to problem-solving
+          and innovation, being born in Baku.
         </motion.p>
+
         <motion.p
           initial={variants.initial}
           whileInView={variants.whileInView}
@@ -44,19 +50,21 @@ const AboutMe = () => {
           viewport={{ once: true }}
           className="mb-3 sm:text-lg lg:text-xl"
         >
-          For frontend development, I rely on React, TypeScript, Next.js, and
-          Tailwind CSS to craft intuitive and sleek user interfaces. On the
-          backend, I leverage Node.js, Express.js, Python, and cloud platforms
-          like AWS and Firebase to build robust and scalable applications.
+          My main interests are coding, learning, and creating impactful
+          projects. For frontend development, I rely on React, TypeScript,
+          Next.js, and Tailwind CSS. On the backend, I work with Node.js,
+          Express.js, Python, and cloud platforms like AWS and Firebase to build
+          scalable applications.
         </motion.p>
+
         <motion.p
-          className="sm:text-lg lg    :text-xl"
           initial={variants.initial}
           whileInView={variants.whileInView}
           transition={{ duration: 0.5, delay: 0.8 }}
           viewport={{ once: true }}
+          className="sm:text-lg lg:text-xl"
         >
-          Coding isn&apos;t just a job for me it&apos;s a fundamental part of
+          Coding isn&apos;t just a job for me; it&apos;s a fundamental part of
           who I am. I can&apos;t imagine my life without it.
         </motion.p>
       </div>
